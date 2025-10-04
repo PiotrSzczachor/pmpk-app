@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { Events } from './pages/events/events';
 import { Map } from './pages/map/map';
+import { EventInfo } from './pages/event-info/event-info';
 import { ProfileView } from './pages/profile/profile-view/profile-view';
 
 export const routes: Routes = [
@@ -11,6 +12,8 @@ export const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: Home },
       { path: 'events', component: Events },
+      { path: 'map', component: Map},
+      { path: 'event/:id', component: EventInfo}
       { path: 'map', component: Map },
       { path: 'profile', component: ProfileView }
     ],

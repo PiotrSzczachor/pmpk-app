@@ -2,12 +2,12 @@ import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
-  selector: 'app-events-map',
+  selector: 'app-event-map',
   imports: [],
-  templateUrl: './events-map.html',
-  styleUrl: './events-map.scss'
+  templateUrl: './event-map.html',
+  styleUrl: './event-map.scss'
 })
-export class EventsMap implements AfterViewInit {
+export class EventMap implements AfterViewInit {
   private map!: L.Map;
 
   ngAfterViewInit(): void {
