@@ -1,0 +1,69 @@
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: inherit;
+    color: #391F96;
+    margin: 12px 0;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FAB941;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 100px;
+    text-align: center;
+    line-height: 1.5;
+
+    .month {
+        font-size: 1.5em;
+    }
+
+    .day {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .weekday {
+        font-size: 1.5em;
+    }
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .event-title {
+        margin: 0;
+        font-size: 2em;
+        font-weight: bold;
+        color: #391F96;
+    }
+
+    .event-details {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 1.5em;
+        color: #391F96;
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            mat-icon {
+                color: #5c5c5c;
+            }
+        }
+
+        .time {
+            font-weight: 600;
+        }
+    }
+}
