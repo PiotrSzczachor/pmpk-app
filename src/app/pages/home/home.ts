@@ -15,9 +15,9 @@ export class Home {
     informationCircles = [
         { text: 'Odkryj projekty i pomysły, które zmieniają Kraków', icon: 'search' },
         { text: 'Dołącz do wydarzeń i działań społecznych', icon: 'done' },
-        { text: 'Znajdź miejsce, gdzie Twoja pomoc jest potrzebna', icon: 'search' },
-        { text: 'Masz pomysł? Podziel się nim z innymi', icon: 'search' },
-        { text: 'Dołącz do grona aktywnych wolontariuszy', icon: 'search' },
+        { text: 'Znajdź miejsce, gdzie Twoja pomoc jest potrzebna', icon: 'house' },
+        { text: 'Masz pomysł? Podziel się nim z innymi', icon: 'lightbulb_2' },
+        { text: 'Dołącz do grona aktywnych wolontariuszy', icon: 'accessibility_new' },
 
     ];
 
