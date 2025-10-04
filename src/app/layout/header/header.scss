@@ -1,27 +1,27 @@
-.header-container{
+.header-container {
     height: 100%;
     width: 100%;
-    background-color: #391F96;
+    background-color: var(--font-color);
     display: flex;
     color: white;
     font-size: 1.5em;
     gap: 60px;
 
-    .logo-container{
+    .logo-container {
         height: 100%;
         margin-left: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        img{
+        img {
             height: 80%;
             width: auto;
             cursor: pointer;
         }
     }
 
-    .nav-container{
+    .nav-container {
         height: 100%;
         display: flex;
         align-items: center;
@@ -29,13 +29,13 @@
         margin-left: 20px;
         padding-top: 15px;
 
-        a{
+        a {
             color: white;
             text-decoration: none;
             font-weight: bold;
             cursor: pointer;
 
-            &.active{
+            &.active {
                 text-decoration: underline;
             }
         }
@@ -50,17 +50,17 @@
         margin-right: 50px;
         padding-top: 15px;
 
-        .login-button{
+        .login-button {
             padding: 10px 20px;
             border: none;
             border-radius: 10px;
             cursor: pointer;
             font-size: 1em;
             font-weight: bold;
-            background-color: #FAB941;
+            background-color: var(--background-yellow-color);
         }
 
-        .register-button{
+        .register-button {
             padding: 10px 20px;
             border: 2px solid white;
             border-radius: 10px;
