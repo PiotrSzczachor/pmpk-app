@@ -3,8 +3,8 @@
         <img src="logo.svg" alt="Logo">
     </div>
     <div class="nav-container">
-        <a routerLink="/home" routerLinkActive="active">Strona główna</a>
-        <a routerLink="/event" routerLinkActive="active">Wydarzenia</a>
+        <a (click)="navigateToHome()">Strona główna</a>
+        <a (click)="navigateToEvents()">Wydarzenia</a>
         <a routerLink="/map" routerLinkActive="active">Mapa</a>
     </div>
     <div class="login-buttons-container">

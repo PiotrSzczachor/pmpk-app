@@ -1,0 +1,68 @@
+.events-filters-container{
+    height: 100%;
+    width: 100%;
+    background-color: #FAB941;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-bottom: 1%;
+
+    .title {
+        font-size: 3.0em;
+        color: #391F96;
+    }
+
+    --control-h: 44px;
+
+    .filters-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .pill.input {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            mat-icon {
+                font-size: 20px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            input {
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 1em;
+                min-width: 200px;
+
+                &::placeholder {
+                color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+
+        .show-on-map-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: white;
+            background-color: #391F96;
+            width: fit-content;
+            height: 44px;
+            gap: 8px;
+
+            mat-icon {
+                font-size: 20px;
+            }
+        }
+    }
+}
