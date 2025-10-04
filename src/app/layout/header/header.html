@@ -6,6 +6,8 @@
         <a (click)="navigateToHome()">Strona główna</a>
         <a (click)="navigateToEvents()">Wydarzenia</a>
         <a (click)="navigateToMap()">Mapa</a>
+        <a *ngIf="isLogged" (click)="navigateToMyEvents()">Moje wydarzenia</a>
+        <a (click)="navigateToChat()">Chat</a>
     </div>
     <div class="login-buttons-container">
         <button class="register-button">Zarejestruj się</button>
