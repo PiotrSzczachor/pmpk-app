@@ -9,13 +9,13 @@
  */
 
 
-export interface AuthInfo { 
-    isAuthenticated?: boolean;
+export interface Event { 
     guid?: string;
-    roles?: Array<string> | null;
-    claims?: Array<string> | null;
-    name?: string | null;
-    surname?: string | null;
-    email?: string | null;
+    organizationGuid?: string | null;
+    startDate?: string | null;
+    endDate?: string | null;
+    addressGuid?: string | null;
+    qualifications?: string | null;
+    closed?: boolean;
 }
 
