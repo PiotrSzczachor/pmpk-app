@@ -1,0 +1,15 @@
+<div>
+    <div class="header-with-filter">
+        <h1 class="title">Zapisane wydarzenia</h1>
+        <select class="filter-button" [(ngModel)]="selectedFilter">
+            <option value="najnowsze">Najnowsze</option>
+            <option value="najstarsze">Najstarsze</option>
+            <option value="alfabetycznie">Alfabetycznie</option>
+        </select>
+    </div>
+    <div class="events-list">
+        <app-event-item></app-event-item>
+        <app-event-item></app-event-item>
+        <app-event-item></app-event-item>
+    </div>
+</div>

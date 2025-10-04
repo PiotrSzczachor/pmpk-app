@@ -1,0 +1,12 @@
+<div class="profile-with-events-container">
+    <div class="profile-container">
+        <img src="prof.svg" alt="Logo">
+        <div class="user-info">
+            <p class="user-name">{{user.firstName + " " + user.lastName}}</p>
+            <p class="user-info">Wolontariusz od {{ user.accountCreated | date: 'dd-MM-yyyy' }}</p>
+        </div>
+    </div>
+    <div class="saved-events-banner">
+        <app-saved-events-list></app-saved-events-list>
+    </div>
+</div>`

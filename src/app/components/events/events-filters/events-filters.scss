@@ -1,7 +1,7 @@
-.events-filters-container{
+.events-filters-container {
     height: 100%;
     width: 100%;
-    background-color: #FAB941;
+    background-color: var(--background-yellow-color);
     display: flex;
     flex-direction: column;
 
@@ -11,7 +11,7 @@
 
     .title {
         font-size: 3.0em;
-        color: #391F96;
+        color: var(--font-color);
     }
 
     --control-h: 44px;
@@ -43,7 +43,7 @@
                 min-width: 200px;
 
                 &::placeholder {
-                color: rgba(0, 0, 0, 0.5);
+                    color: rgba(0, 0, 0, 0.5);
                 }
             }
         }
@@ -101,7 +101,7 @@
             cursor: pointer;
             font-size: 1em;
             color: white;
-            background-color: #391F96;
+            background-color: var(--font-color);
             width: fit-content;
             height: 44px;
             gap: 8px;

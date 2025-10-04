@@ -1,0 +1,29 @@
+.profile-container {
+    background-color: var(--background-yellow-color);
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 0.3px;
+        color: var(--font-color);
+
+        .user-name {
+            font-weight: 900;
+            font-size: 2.5em !important;
+        }
+
+        .user-info {
+            font-weight: 900;
+            font-size: 1.2em !important;
+        }
+    }
+}
+

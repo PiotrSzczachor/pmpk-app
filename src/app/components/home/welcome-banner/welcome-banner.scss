@@ -1,10 +1,10 @@
-.welcome-banner-container{
+.welcome-banner-container {
     height: 100%;
     width: 100%;
-    background-color: #FAB941;
+    background-color: var(--background-yellow-color);
     display: flex;
 
-    .left-section-banner-container{
+    .left-section-banner-container {
         height: 100%;
         width: 50%;
 
@@ -17,9 +17,9 @@
 
             .slogan-container {
                 font-size: 3.0em;
-                color: #391F96;
-                
-                p{
+                color: var(--font-color);
+
+                p {
                     //padding: 0;
                     margin-bottom: 5px;
                 }
@@ -37,19 +37,19 @@
                 cursor: pointer;
                 font-size: 1.6em;
                 color: white;
-                background-color: #391F96;
+                background-color: var(--font-color);
                 width: fit-content;
             }
         }
     }
 
-    .right-section-banner-container{
+    .right-section-banner-container {
         height: 100%;
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: end;
-        
+
         .image-container {
             height: 100%;
             width: 100%;
