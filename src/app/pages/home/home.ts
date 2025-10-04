@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { AuthInfo, UserService } from '../../api';
 import { WelcomeBanner } from "../../components/home/welcome-banner/welcome-banner";
 import { InformationCircle } from '../../components/home/information-circle/information-circle';
 import { CommonModule } from '@angular/common';
+import { AppStore } from '../../store/app.store';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.scss'
 })
 export class Home {
-    user = signal<AuthInfo | null>(null);
+    private readonly appStore = inject(AppStore);
     informationCircles = [
         { text: 'Odkryj projekty i pomysły, które zmieniają Kraków', icon: 'search' },
         { text: 'Dołącz do wydarzeń i działań społecznych', icon: 'done' },
@@ -25,7 +26,7 @@ export class Home {
 
     ngOnInit(): void {
         this.userService.getUserInfo().subscribe({
-        next: (u) => this.user.set(u),
+        next: (u) => this.appStore.setAuthInfo(u),
             error: (err) => {
                 console.error('User info failed', err);
             }

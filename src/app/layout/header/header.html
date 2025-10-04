@@ -6,11 +6,22 @@
         <a (click)="navigateToHome()">Strona główna</a>
         <a (click)="navigateToEvents()">Wydarzenia</a>
         <a (click)="navigateToMap()">Mapa</a>
-        <a *ngIf="isLogged" (click)="navigateToMyEvents()">Moje wydarzenia</a>
+        <a *ngIf="appStore.authInfo()" (click)="navigateToMyEvents()">Moje wydarzenia</a>
         <a (click)="navigateToChat()">Chat</a>
     </div>
     <div class="login-buttons-container">
-        <button class="register-button">Zarejestruj się</button>
-        <button class="login-button">Zaloguj</button>
+        <!-- if user is logged in -->
+        <ng-container *ngIf="appStore.authInfo(); else loggedOut">
+            <span class="user-name">
+                {{ appStore.authInfo()?.name }}
+            </span>
+            <button (click)="logout()" class="login-button">Wyloguj</button>
+        </ng-container>
+
+        <!-- if not logged in -->
+        <ng-template #loggedOut>
+            <button class="register-button">Zarejestruj się</button>
+            <button (click)="login()" class="login-button">Zaloguj</button>
+        </ng-template>
     </div>
 </div>

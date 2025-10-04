@@ -1,6 +1,8 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../api';
+import { AppStore } from '../../store/app.store';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +12,26 @@ import { Router } from '@angular/router';
 })
 export class Header {
   isLogged: boolean = true;
+  appStore = inject(AppStore);
 
   constructor(
-    private router: Router
+    private router: Router, private authService: AuthService
   ) {
 
   }
 
+  login() {
+    const returnUrl = window.location.origin;
+    const basePath = this.authService.configuration.basePath;
+    window.document.location.href = basePath + '/auth/login?returnUrl=' + returnUrl
+  }
+
+  logout() {
+    
+  }
+
   navigateToHome() {
+    console.log(this.appStore.authInfo())
     this.router.navigate(['/home']);
   }
 

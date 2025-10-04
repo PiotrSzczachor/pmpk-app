@@ -3,17 +3,16 @@ import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 import { AuthService } from '../api';
+import { AppStore } from '../store/app.store';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-    const authService = inject(AuthService)
+    const appStore = inject(AppStore);
     
     return next(req).pipe(
         tap({
             error: (err) => {
             if (err.status === 401) {
-                const returnUrl = window.location.origin;
-                const basePath = authService.configuration.basePath;
-                window.document.location.href = basePath + '/auth/login?returnUrl=' + returnUrl
+                appStore.clearAuthInfo();
             }
         }
     })
