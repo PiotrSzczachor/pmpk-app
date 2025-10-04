@@ -1,0 +1,18 @@
+.home-container {
+    height: 100%;
+    width: 100%;
+
+    .banner-container {
+        height: 70%;
+        width: 100%;
+    }
+
+    .information-circles-container {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}

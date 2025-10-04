@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="home-container">
+    <div class="banner-container">
+        <app-welcome-banner></app-welcome-banner>
+    </div>
+    <div class="information-circles-container">
+        <app-information-circle *ngFor="let item of informationCircles" [text]="item.text" [icon]="item.icon">
+        </app-information-circle>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.welcome-banner-container{
+    height: 100%;
+    width: 100%;
+    background-color: #FAB941;
+    display: flex;
+
+    .left-section-banner-container{
+        height: 100%;
+        width: 50%;
+
+        .banner-content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-left: 10%;
+
+            .slogan-container {
+                font-size: 3.0em;
+                color: #391F96;
+                
+                p{
+                    //padding: 0;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .disclaimer {
+                margin-top: 30px;
+                font-size: 1.5em;
+            }
+
+            .find-project-button {
+                padding: 20px 20px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 1.6em;
+                color: white;
+                background-color: #391F96;
+                width: fit-content;
+            }
+        }
+    }
+
+    .right-section-banner-container{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        
+        .image-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
