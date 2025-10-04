@@ -1,0 +1,70 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 5px;
+    color: var(--font-color);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.forty-width {
+    width: 50%;
+}
+
+.block-section {
+    width: 100%;
+}
+
+.two-inputs-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.address-description-row {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.right-column {
+    width: 50%;
+}
+
+input,
+textarea {
+    border-radius: 10px;
+    border: 1px solid var(--font-color);
+    padding: 5px 10px;
+    height: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--font-color);
+}
+
+.description textarea {
+    height: calc(3 * 50px + 10px);
+    resize: vertical;
+}
