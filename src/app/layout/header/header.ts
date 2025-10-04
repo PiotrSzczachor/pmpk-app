@@ -21,4 +21,8 @@ export class Header {
   navigateToEvents() {
     this.router.navigate(['/events']);
   }
+
+  navigateToMap() {
+    this.router.navigate(['/map']);
+  }
 }

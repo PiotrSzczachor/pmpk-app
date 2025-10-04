@@ -52,43 +52,43 @@
             position: relative;
             display: inline-block;
 
-        .date {
-            height: var(--control-h);
-            background: #F6D395;
-            padding: 0 14px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,.1);
-            border: none;
-            width: 140px;
-            font-size: 1em;
+            .date {
+                height: var(--control-h);
+                background: #F6D395;
+                padding: 0 14px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0,0,0,.1);
+                border: none;
+                width: 140px;
+                font-size: 1em;
 
-            &:invalid::-webkit-datetime-edit {
-            color: transparent;
+                &:invalid::-webkit-datetime-edit {
+                color: transparent;
+                }
+                &:invalid::-webkit-datetime-edit-text {
+                color: transparent;
+                }
+                &:invalid::-webkit-datetime-edit-month-field,
+                &:invalid::-webkit-datetime-edit-day-field,
+                &:invalid::-webkit-datetime-edit-year-field {
+                color: transparent;
+                }
             }
-            &:invalid::-webkit-datetime-edit-text {
-            color: transparent;
-            }
-            &:invalid::-webkit-datetime-edit-month-field,
-            &:invalid::-webkit-datetime-edit-day-field,
-            &:invalid::-webkit-datetime-edit-year-field {
-            color: transparent;
-            }
-        }
 
-        .date-placeholder {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #6e655a;
-            pointer-events: none;
-            font-weight: 600;
-            transition: opacity .2s ease;
-        }
+            .date-placeholder {
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #6e655a;
+                pointer-events: none;
+                font-weight: 600;
+                transition: opacity .2s ease;
+            }
 
-        .date:valid ~ .date-placeholder {
-            opacity: 0;
-        }
+            .date:valid ~ .date-placeholder {
+                opacity: 0;
+            }
         }
 
         
