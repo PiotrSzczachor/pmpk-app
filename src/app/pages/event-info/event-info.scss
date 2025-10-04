@@ -1,0 +1,42 @@
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .left-side {
+        width: 70%;
+        padding: 1%;
+
+        .owner-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        .description {
+            font-size: 1.5em;
+        }
+    }
+
+    .right-side {
+        width: 30%;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .save-button {
+            width: 50%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: #FAB941;
+        }
+    }
+}

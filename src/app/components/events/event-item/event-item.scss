@@ -35,35 +35,50 @@
 
 .event-content {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    width: 100%;
 
-    .event-title {
-        margin: 0;
-        font-size: 2em;
-        font-weight: bold;
-        color: var(--font-color);
-    }
-
-    .event-details {
+    .left-section {
+        width: 80%;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         gap: 20px;
-        font-size: 1.5em;
-        color: var(--font-color);
 
-        .location {
+        .event-title {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--font-color);
+        }
+
+        .event-details {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 20px;
+            font-size: 1.5em;
+            color: var(--font-color);
 
-            mat-icon {
-                color: #5c5c5c;
+            .location {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                mat-icon {
+                    color: #5c5c5c;
+                }
+            }
+
+            .time {
+                font-weight: 600;
             }
         }
+    }
 
-        .time {
-            font-weight: 600;
-        }
+    .right-section {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.5em;
     }
 }
