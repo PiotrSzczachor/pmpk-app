@@ -4,8 +4,11 @@
     background-color: #FAB941;
     display: flex;
     flex-direction: column;
-    padding-left: 2%;
-    padding-bottom: 1%;
+
+    .events-filters-wrapper {
+        padding: 0 2%;
+        padding-bottom: 1%;
+    }
 
     .title {
         font-size: 3.0em;
@@ -46,6 +49,50 @@
             }
         }
 
+        .date-wrapper {
+            position: relative;
+            display: inline-block;
+
+        .date {
+            height: var(--control-h);
+            background: #F6D395;
+            padding: 0 14px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,.1);
+            border: none;
+            width: 140px;
+            font-size: 1em;
+
+            &:invalid::-webkit-datetime-edit {
+            color: transparent;
+            }
+            &:invalid::-webkit-datetime-edit-text {
+            color: transparent;
+            }
+            &:invalid::-webkit-datetime-edit-month-field,
+            &:invalid::-webkit-datetime-edit-day-field,
+            &:invalid::-webkit-datetime-edit-year-field {
+            color: transparent;
+            }
+        }
+
+        .date-placeholder {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6e655a;
+            pointer-events: none;
+            font-weight: 600;
+            transition: opacity .2s ease;
+        }
+
+        .date:valid ~ .date-placeholder {
+            opacity: 0;
+        }
+        }
+
+        
         .show-on-map-button {
             display: inline-flex;
             align-items: center;
@@ -59,6 +106,7 @@
             width: fit-content;
             height: 44px;
             gap: 8px;
+            margin-left: auto;
 
             mat-icon {
                 font-size: 20px;
