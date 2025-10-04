@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome-banner',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './welcome-banner.scss'
 })
 export class WelcomeBanner {
+  constructor(private router: Router) {
 
+  }
+
+  navigateToEvents() {
+    this.router.navigate(['/events']);
+  }
 }
