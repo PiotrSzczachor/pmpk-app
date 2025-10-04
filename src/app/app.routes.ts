@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
-import { Layout } from './layout/layout/layout';
 import { Events } from './pages/events/events';
+import { Map } from './pages/map/map';
 
 export const routes: Routes = [
     {
@@ -9,7 +9,8 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: Home },
-      { path: 'events', component: Events }
+      { path: 'events', component: Events },
+      { path: 'map', component: Map}
     ],
   },
   { path: '**', redirectTo: '' },
