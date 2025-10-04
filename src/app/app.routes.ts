@@ -4,6 +4,7 @@ import { Events } from './pages/events/events';
 import { Map } from './pages/map/map';
 import { EventInfo } from './pages/event-info/event-info';
 import { ProfileView } from './pages/profile/profile-view/profile-view';
+import { Chat } from './pages/chat/chat';
 
 export const routes: Routes = [
   {
@@ -16,7 +17,8 @@ export const routes: Routes = [
       { path: 'event/:id', component: EventInfo},
       { path: 'map', component: Map },
       { path: 'profile', component: ProfileView },
-      { path: 'my-events', component: ProfileView }
+      { path: 'my-events', component: ProfileView },
+      { path: 'chat', component: Chat}
     ],
   },
   { path: '**', redirectTo: '' },
