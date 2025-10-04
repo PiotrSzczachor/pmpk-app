@@ -15,7 +15,8 @@ export const routes: Routes = [
       { path: 'map', component: Map},
       { path: 'event/:id', component: EventInfo},
       { path: 'map', component: Map },
-      { path: 'profile', component: ProfileView }
+      { path: 'profile', component: ProfileView },
+      { path: 'my-events', component: ProfileView }
     ],
   },
   { path: '**', redirectTo: '' },
