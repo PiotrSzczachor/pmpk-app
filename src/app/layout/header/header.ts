@@ -51,6 +51,10 @@ export class Header {
   navigateToChat() {
     this.router.navigate(['/chat']);
   }
+
+    navigateToAddEvent() {
+    this.router.navigate(['/add-event']);
+  }
   
   
       ngOnInit(): void {
