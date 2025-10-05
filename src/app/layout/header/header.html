@@ -7,7 +7,7 @@
         <a (click)="navigateToEvents()">Wydarzenia</a>
         <a (click)="navigateToMap()">Mapa</a>
         <a *ngIf="appStore.authInfo()" (click)="navigateToMyEvents()">Moje wydarzenia</a>
-        <a (click)="navigateToChat()">Chat</a>
+        <a *ngIf="appStore.authInfo()" (click)="navigateToChat()">Chat</a>
     </div>
     <div class="login-buttons-container">
         <!-- if user is logged in -->
