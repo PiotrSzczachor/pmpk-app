@@ -21,10 +21,10 @@ export class AddEvent implements OnInit{
       title: ['', Validators.required],
       startDate: ['', Validators.required],
       endDate: ['', Validators.required],
-      street: ['', Validators.required],
-      buildingNumber: ['', Validators.required],
-      postalCode: ['', Validators.required],
-      city: ['', Validators.required],
+      addressStreet: ['', Validators.required],
+      addressBuildingNumber: ['', Validators.required],
+      addressPostalCode: ['', Validators.required],
+      addressCity: ['', Validators.required],
       description: ['']
     });
   }

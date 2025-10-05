@@ -4,9 +4,10 @@
     </div>
     <div class="nav-container">
         <a (click)="navigateToHome()">Strona główna</a>
-        <a (click)="navigateToEvents()">Wydarzenia</a>
+        <a *ngIf="!appStore.authInfo()?.roles?.includes('app-organization')" (click)="navigateToEvents()">Wydarzenia</a>
         <a (click)="navigateToMap()">Mapa</a>
         <a *ngIf="appStore.authInfo()" (click)="navigateToMyEvents()">Moje wydarzenia</a>
+        <a *ngIf="appStore.authInfo()?.roles?.includes('app-organization')" (click)="navigateToAddEvent()">Dodaj wydarzenie</a>
         <a *ngIf="appStore.authInfo()" (click)="navigateToChat()">Chat</a>
     </div>
     <div class="login-buttons-container">
