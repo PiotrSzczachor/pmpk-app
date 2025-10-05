@@ -24,12 +24,12 @@ export class Home {
 
     constructor(private userService: UserService) {}
 
-    ngOnInit(): void {
-        this.userService.getUserInfo().subscribe({
-        next: (u) => this.appStore.setAuthInfo(u),
-            error: (err) => {
-                console.error('User info failed', err);
-            }
-        });
-    }
+    // ngOnInit(): void {
+    //     this.userService.getUserInfo().subscribe({
+    //     next: (u) => this.appStore.setAuthInfo(u),
+    //         error: (err) => {
+    //             console.error('User info failed', err);
+    //         }
+    //     });
+    // }
 }

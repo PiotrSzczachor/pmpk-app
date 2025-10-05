@@ -3,9 +3,9 @@
     <div class="add-event-form-container">
         <h1 class="title">Dodaj wydarzenie</h1>
 
-        <app-add-event-form></app-add-event-form>
+        <app-add-event-form [formGroup]="formGroup"></app-add-event-form>
     </div>
     <div class="button-container">
-        <button class="add-btn">Dodaj</button>
+        <button class="add-btn" (click)="addEvent()">Dodaj</button>
     </div>
 </div>

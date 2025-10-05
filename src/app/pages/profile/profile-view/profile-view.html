@@ -2,8 +2,8 @@
     <div class="profile-container">
         <img src="prof.svg" alt="Logo">
         <div class="user-info">
-            <p class="user-name">{{user.firstName + " " + user.lastName}}</p>
-            <p class="user-info">Wolontariusz od {{ user.accountCreated | date: 'dd-MM-yyyy' }}</p>
+            <p class="user-name">{{appStore.authInfo()?.name}}</p>
+            <p class="user-info">W sytemie od {{ user.accountCreated | date: 'dd-MM-yyyy' }}</p>
         </div>
     </div>
     <div class="saved-events-banner">

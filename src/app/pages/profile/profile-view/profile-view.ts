@@ -1,6 +1,7 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SavedEventsList } from '../../../components/events/saved-events-list/saved-events-list';
+import { AppStore } from '../../../store/app.store';
 
 @Component({
   selector: 'app-profile-view',
@@ -9,11 +10,11 @@ import { SavedEventsList } from '../../../components/events/saved-events-list/sa
   styleUrl: './profile-view.scss'
 })
 export class ProfileView {
+    appStore = inject(AppStore);
   userLoged = true;
   user: any = {
-    firstName: "Cyprian",
-    lastName: "Banino",
-    accountCreated: new Date("2024-12-06")
+    firstName: this.appStore.authInfo()?.name,
+    accountCreated: new Date("2025-10-04")
   }
 
 }

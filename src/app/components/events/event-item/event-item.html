@@ -1,8 +1,8 @@
 <div class="event-item">
   <div class="event-date">
-    <span class="month">Gru</span>
-    <span class="day">04</span>
-    <span class="weekday">Sob</span>
+    <span class="month">{{ month }}</span>
+    <span class="day">{{ day }}</span>
+    <span class="weekday">{{ weekday }}</span>
   </div>
 
   <div class="event-content">
@@ -11,9 +11,9 @@
       <div class="event-details">
           <div class="location">
             <mat-icon>location_on</mat-icon>
-            <span>{{event?.addressStreet + ' ' + event?.addressBuildingNumber + event?.addressFlatNumber}}</span>
+            <span>{{event?.addressStreet + ' ' + event?.addressBuildingNumber}}</span>
           </div>
-          <div class="time">{{event?.startDate + '-' + event?.endDate}}</div>
+          <div class="time">{{ (event.startDate | date:'shortTime') + ' - ' + (event.endDate | date:'shortTime') }}</div>
       </div>
     </div>
     <div class="right-section">
