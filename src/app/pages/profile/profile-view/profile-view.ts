@@ -10,13 +10,11 @@ import { AppStore } from '../../../store/app.store';
   styleUrl: './profile-view.scss'
 })
 export class ProfileView {
-  appStore = inject(AppStore);
-  
-  userLoged = this.appStore.authInfo()?.isAuthenticated;
+    appStore = inject(AppStore);
+  userLoged = true;
   user: any = {
     firstName: this.appStore.authInfo()?.name,
-    lastName: this.appStore.authInfo()?.surname,
-    accountCreated: new Date("2024-12-06")
+    accountCreated: new Date("2025-10-04")
   }
 
 }

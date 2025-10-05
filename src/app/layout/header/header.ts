@@ -1,7 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../api';
+import { AuthService, UserService } from '../../api';
 import { AppStore } from '../../store/app.store';
 
 @Component({
@@ -15,7 +15,7 @@ export class Header {
   appStore = inject(AppStore);
 
   constructor(
-    private router: Router, private authService: AuthService
+    private router: Router, private authService: AuthService, private userService: UserService
   ) {
 
   }
@@ -50,4 +50,14 @@ export class Header {
   navigateToChat() {
     this.router.navigate(['/chat']);
   }
+  
+  
+      ngOnInit(): void {
+          this.userService.getUserInfo().subscribe({
+          next: (u) => this.appStore.setAuthInfo(u),
+              error: (err) => {
+                  console.error('User info failed', err);
+              }
+          });
+      }
 }
