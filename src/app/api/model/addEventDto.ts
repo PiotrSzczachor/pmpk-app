@@ -7,25 +7,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ParticipantDto } from './participantDto';
 
 
-export interface EventDto { 
-    guid?: string;
-    organizationGuid?: string | null;
-    organizationName?: string | null;
+export interface AddEventDto { 
     title?: string | null;
     description?: string | null;
     startDate?: string | null;
     endDate?: string | null;
-    addressGuid?: string | null;
     addressCity?: string | null;
-    addressFlatNumber?: string | null;
     addressBuildingNumber?: string | null;
-    postalCode?: string | null;
+    addressPostalCode?: string | null;
     addressStreet?: string | null;
-    qualifications?: string | null;
-    closed?: boolean;
-    participants?: Array<ParticipantDto> | null;
 }
 

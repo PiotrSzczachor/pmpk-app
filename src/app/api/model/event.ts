@@ -12,6 +12,8 @@
 export interface Event { 
     guid?: string;
     organizationGuid?: string | null;
+    title?: string | null;
+    description?: string | null;
     startDate?: string | null;
     endDate?: string | null;
     addressGuid?: string | null;

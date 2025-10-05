@@ -7,6 +7,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { ParticipantEventStatus } from './participantEventStatus';
 
 
 export interface ParticipantDto { 
@@ -15,5 +16,8 @@ export interface ParticipantDto {
     surname?: string | null;
     email?: string | null;
     phone?: string | null;
+    eventParticipationStatus?: ParticipantEventStatus;
 }
+
+
 

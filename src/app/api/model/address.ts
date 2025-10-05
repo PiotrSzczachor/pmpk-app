@@ -14,6 +14,8 @@ export interface Address {
     street?: string | null;
     city?: string | null;
     region?: string | null;
+    buildingNumber?: string | null;
+    flatNumber?: string | null;
     postalCode: string | null;
 }
 

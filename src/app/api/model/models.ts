@@ -1,3 +1,4 @@
+export * from './addEventDto';
 export * from './address';
 export * from './authInfo';
 export * from './event';
