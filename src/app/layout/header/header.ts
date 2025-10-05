@@ -27,7 +27,8 @@ export class Header {
   }
 
   logout() {
-    
+    console.log('logout');
+    this.authService.logout().subscribe(x => window.location.reload());
   }
 
   navigateToHome() {

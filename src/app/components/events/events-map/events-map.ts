@@ -31,6 +31,6 @@ export class EventsMap implements AfterViewInit {
 
     L.marker([50.0619, 19.9369], { icon: customIcon })
       .addTo(this.map)
-      .bindPopup('<b>Kraków</b><br>Spawner naganiaczy klubowych');
+      .bindPopup('<b>Kraków</b><br>Dom seniora');
   }
 }
