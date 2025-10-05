@@ -1,0 +1,32 @@
+.edit-profile-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .add-event-form-container {
+        padding: 0 13% 0 13%;
+        height: 80%;
+    }
+
+    .button-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+
+        .add-btn {
+            height: 60px;
+            width: 400px;
+            border-radius: 10px;
+            border: 2px solid var(--background-yellow-color);
+            background-color: var(--background-yellow-color);
+            cursor: pointer;
+        }
+    }
+
+    .title {
+        font-size: 3.0em;
+        color: var(--font-color);
+    }
+}

@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { EventsFilters } from '../../components/events/events-filters/events-filters';
 import { EventsList } from "../../components/events/events-list/events-list";
+import { AppStore } from '../../store/app.store';
+import { EventsService } from '../../api';
 
 @Component({
   selector: 'app-events',
@@ -9,6 +11,19 @@ import { EventsList } from "../../components/events/events-list/events-list";
   templateUrl: './events.html',
   styleUrl: './events.scss'
 })
-export class Events {
+export class Events implements OnInit{
+  appStore = inject(AppStore);
 
+  constructor(private eventsService: EventsService) {
+
+  }
+
+  ngOnInit(): void {
+    this.eventsService.eventsGet().subscribe({
+        next: (e) => this.appStore.setEvents(e),
+            error: (err) => {
+                console.error('Events failed', err);
+            }
+        });
+  }
 }

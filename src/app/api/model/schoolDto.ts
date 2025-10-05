@@ -9,13 +9,9 @@
  */
 
 
-export interface AuthInfo { 
-    isAuthenticated?: boolean;
+export interface SchoolDto { 
     guid?: string;
-    roles?: Array<string> | null;
-    claims?: Array<string> | null;
     name?: string | null;
-    surname?: string | null;
-    email?: string | null;
+    addressGuid?: string;
 }
 

@@ -7,15 +7,17 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { ParticipantEventStatus } from './participantEventStatus';
 
 
-export interface AuthInfo { 
-    isAuthenticated?: boolean;
+export interface ParticipantDto { 
     guid?: string;
-    roles?: Array<string> | null;
-    claims?: Array<string> | null;
     name?: string | null;
     surname?: string | null;
     email?: string | null;
+    phone?: string | null;
+    eventParticipationStatus?: ParticipantEventStatus;
 }
+
+
 

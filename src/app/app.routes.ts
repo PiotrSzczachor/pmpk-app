@@ -5,6 +5,7 @@ import { Map } from './pages/map/map';
 import { EventInfo } from './pages/event-info/event-info';
 import { ProfileView } from './pages/profile/profile-view/profile-view';
 import { Chat } from './pages/chat/chat';
+import { AddEvent } from './pages/profile/add-event/add-event';
 
 export const routes: Routes = [
   {
@@ -13,12 +14,14 @@ export const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: Home },
       { path: 'events', component: Events },
-      { path: 'map', component: Map},
-      { path: 'event/:id', component: EventInfo},
+      { path: 'map', component: Map },
+      { path: 'event/:id', component: EventInfo },
       { path: 'map', component: Map },
       { path: 'profile', component: ProfileView },
       { path: 'my-events', component: ProfileView },
-      { path: 'chat', component: Chat}
+      { path: 'chat', component: Chat},
+      { path: 'add-event', component: AddEvent },
+      { path: 'my-events', component: ProfileView }
     ],
   },
   { path: '**', redirectTo: '' },

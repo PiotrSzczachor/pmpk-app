@@ -1,5 +1,15 @@
+export * from './address.service';
+import { AddressService } from './address.service';
 export * from './auth.service';
 import { AuthService } from './auth.service';
+export * from './events.service';
+import { EventsService } from './events.service';
+export * from './generateDocuments.service';
+import { GenerateDocumentsService } from './generateDocuments.service';
+export * from './organizations.service';
+import { OrganizationsService } from './organizations.service';
+export * from './schools.service';
+import { SchoolsService } from './schools.service';
 export * from './user.service';
 import { UserService } from './user.service';
-export const APIS = [AuthService, UserService];
+export const APIS = [AddressService, AuthService, EventsService, GenerateDocumentsService, OrganizationsService, SchoolsService, UserService];

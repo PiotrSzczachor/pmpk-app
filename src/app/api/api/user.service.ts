@@ -1,5 +1,5 @@
 /**
- * KeycloakApiTemplate | v1
+ * KeycloakApiTemplate
  *
  * 
  *

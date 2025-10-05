@@ -1,5 +1,6 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import * as L from 'leaflet';
+import { EventDto } from '../../../api';
 
 @Component({
   selector: 'app-events-map',
@@ -8,6 +9,7 @@ import * as L from 'leaflet';
   styleUrl: './events-map.scss'
 })
 export class EventsMap implements AfterViewInit {
+  @Input() events: Array<EventDto> = new Array();
   private map!: L.Map;
 
   ngAfterViewInit(): void {

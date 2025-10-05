@@ -9,13 +9,9 @@
  */
 
 
-export interface AuthInfo { 
-    isAuthenticated?: boolean;
+export interface OrganizationDto { 
     guid?: string;
-    roles?: Array<string> | null;
-    claims?: Array<string> | null;
-    name?: string | null;
-    surname?: string | null;
-    email?: string | null;
+    organizationName?: string | null;
+    addressGuid?: string | null;
 }
 
