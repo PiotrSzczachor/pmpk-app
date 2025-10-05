@@ -3,6 +3,6 @@
         <app-events-filters [isMap]="true"></app-events-filters>
     </div>
     <div class="map-container">
-        <app-events-map></app-events-map>
+        <app-events-map [events]="appStore.events()"></app-events-map>
     </div>
 </div>
