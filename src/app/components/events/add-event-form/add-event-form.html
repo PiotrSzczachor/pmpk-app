@@ -1,47 +1,47 @@
-<div class="form">
-    <div class="input-row full-width">
-        <p class="label">Tytuł</p>
-        <input type="text">
+<form class="form" [formGroup]="formGroup">
+  <div class="input-row full-width">
+    <p class="label">Tytuł</p>
+    <input type="text" formControlName="title" />
+  </div>
+
+  <div class="full-width block-section">
+    <div class="two-inputs-row">
+      <div class="input-row forty-width">
+        <p class="label">Data rozpoczęcia</p>
+        <input type="date" formControlName="startDate" />
+      </div>
+      <div class="input-row forty-width">
+        <p class="label">Data zakończenia</p>
+        <input type="date" formControlName="endDate" />
+      </div>
     </div>
 
-    <div class="full-width block-section">
-        <div class="two-inputs-row">
-            <div class="input-row forty-width">
-                <p class="label">Data rozpoczęcia</p>
-                <input type="date">
-            </div>
-            <div class="input-row forty-width">
-                <p class="label">Data zakończenia</p>
-                <input type="date">
-            </div>
+    <div class="address-description-row">
+      <div class="left-column">
+        <div class="input-row">
+          <p class="label">Ulica</p>
+          <input type="text" formControlName="street" />
         </div>
-
-        <div class="address-description-row">
-            <div class="left-column">
-                <div class="input-row">
-                    <p class="label">Ulica</p>
-                    <input type="text">
-                </div>
-                <div class="input-row">
-                    <p class="label">Numer budynku</p>
-                    <input type="number">
-                </div>
-                <div class="input-row">
-                    <p class="label">Kod pocztowy</p>
-                    <input type="text">
-                </div>
-            </div>
-
-            <div class="right-column">
-                <div class="input-row">
-                    <p class="label">Miasto</p>
-                    <input type="text">
-                </div>
-                <div class="input-row description">
-                    <p class="label">Opis</p>
-                    <textarea></textarea>
-                </div>
-            </div>
+        <div class="input-row">
+          <p class="label">Numer budynku</p>
+          <input type="number" formControlName="buildingNumber" />
         </div>
+        <div class="input-row">
+          <p class="label">Kod pocztowy</p>
+          <input type="text" formControlName="postalCode" />
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="input-row">
+          <p class="label">Miasto</p>
+          <input type="text" formControlName="city" />
+        </div>
+        <div class="input-row description">
+          <p class="label">Opis</p>
+          <textarea formControlName="description"></textarea>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</form>
