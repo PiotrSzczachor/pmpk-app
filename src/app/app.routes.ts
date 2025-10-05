@@ -15,7 +15,6 @@ export const routes: Routes = [
       { path: 'events', component: Events },
       { path: 'map', component: Map },
       { path: 'event/:id', component: EventInfo },
-      { path: 'map', component: Map },
       { path: 'profile', component: ProfileView },
       { path: 'add-event', component: AddEvent },
       { path: 'my-events', component: ProfileView }
