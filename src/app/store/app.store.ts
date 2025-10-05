@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export interface AppState {
   authInfo: AuthInfo | null;
   events: Array<EventDto>
+  event: EventDto | null;
 }
 
 export const AppStore = signalStore(
@@ -19,7 +20,8 @@ export const AppStore = signalStore(
   },
   withState<AppState>({
     authInfo: null,
-    events: []
+    events: [],
+    event: null
   }),
   withMethods((store) => ({
     setAuthInfo(info: AuthInfo) {
@@ -33,6 +35,12 @@ export const AppStore = signalStore(
     },
     clearEvents() {
       patchState(store, { events: [] });
+    },
+    setEvent(event: EventDto) {
+      patchState(store, { event: event });
+    },
+    clearEvent() {
+      patchState(store, { event: null });
     }
   })),
 );

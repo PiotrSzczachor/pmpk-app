@@ -1,4 +1,4 @@
-<div class="event-item">
+<div class="event-item" (click)="redirectToEvent()">
   <div class="event-date">
     <span class="month">{{ month }}</span>
     <span class="day">{{ day }}</span>
@@ -13,7 +13,7 @@
             <mat-icon>location_on</mat-icon>
             <span>{{event?.addressStreet + ' ' + event?.addressBuildingNumber}}</span>
           </div>
-          <div class="time">{{ (event.startDate | date:'shortTime') + ' - ' + (event.endDate | date:'shortTime') }}</div>
+          <div class="time">{{ (event?.startDate | date:'shortTime') + ' - ' + (event?.endDate | date:'shortTime') }}</div>
       </div>
     </div>
     <div class="right-section">

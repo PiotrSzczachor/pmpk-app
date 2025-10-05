@@ -1,12 +1,14 @@
 <div class="main-container">
     <div class="left-side">
-        <app-event-item></app-event-item>
+        @if (appStore.event()) {
+            <app-event-item [event]="appStore.event()"></app-event-item>
+        }
         <div class="owner-info">
             <p>Organizator:</p>
-            {{"DOBRO.KRK"}}
+            {{appStore.event()?.organizationName}}
         </div>
         <div class="description">
-            Bla bla bla
+            {{appStore.event()?.description}}
         </div>
     </div>
     <div class="right-side">

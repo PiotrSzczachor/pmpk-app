@@ -1,22 +1,27 @@
-import { DatePipe, NgIf } from '@angular/common';
+import { CommonModule, DatePipe, NgIf } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { EventDto } from '../../../api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-item',
-  imports: [MatIconModule, NgIf, DatePipe],
+  imports: [MatIconModule, CommonModule, DatePipe],
   templateUrl: './event-item.html',
   styleUrl: './event-item.scss'
 })
 export class EventItem implements OnInit{
-  @Input() event!: EventDto;
+  @Input() event!: EventDto | null;
   @Input() showStatus: boolean = false;
   @Input() generateCertificate: boolean = false;
 
   month!: string;
   day!: string;
   weekday!: string;
+
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
     if (this.event?.startDate) {
@@ -33,5 +38,12 @@ export class EventItem implements OnInit{
 
   private capitalize(str: string): string {
     return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  redirectToEvent() {
+    if(this.event) {
+      const id = this.event.guid;
+      this.router.navigate(['/event/' + id]);
+    }
   }
 }
